@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=DatatypeVariableAssignment
+comment0.text=\n\ @author\ Narit\ Trikasemsak\n\ @version\ 0.1\n
+comment1.params=argv
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ typeTest()
+numComments=3
