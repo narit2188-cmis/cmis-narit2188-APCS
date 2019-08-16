@@ -44,7 +44,7 @@ public class DatatypeVariableAssignment
         Scanner input = new Scanner (System.in);
         System.out.println ("typeTest:");
         
-        int intOne = input.nextInt();
+        /*int intOne = input.nextInt();
         int intTwo = input.nextInt();
         int sumOne = intOne + intTwo;
         int difOne = intOne - intTwo;
@@ -53,6 +53,14 @@ public class DatatypeVariableAssignment
         
         System.out.format ("%s\n%s\n%s\n%s\n%s\n%s\n", 
             intOne, intTwo, sumOne, difOne, prodOne, quotOne);
-            
+        */
+        double dobOne = input.nextDouble();
+        double dobTwo = input.nextDouble();
+        double sumTwo = dobOne + dobTwo;
+        double difTwo = dobOne - dobTwo;
+        double prodTwo= dobOne * dobTwo;
+        double quotTwo = dobOne / dobTwo;
+        System.out.format ("%s\n%s\n%s\n%s\n%s\n%s\n", 
+            dobOne, dobTwo, sumTwo, difTwo, prodTwo, quotTwo);
     }
 }   
