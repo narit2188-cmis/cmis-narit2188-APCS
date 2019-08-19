@@ -70,7 +70,7 @@ public class DatatypeVariableAssignment
             
         
        
-        /* possible lossy conversions
+        /*possible lossy conversions
         
         int intThree = dobOne + dobTwo; 
         int intFour = dobOne - dobTwo;
@@ -86,6 +86,15 @@ public class DatatypeVariableAssignment
         double dobSix = intOne / intTwo;
         System.out.format ("Double made of two integers:\n%s\n%s\n%s\n%s\n", 
             dobThree, dobFour, dobFive, dobSix);        
+        
+        /* possible lossy conversion
+        int mix5 = intOne + dobOne; 
+        int mix6 = intOne - dobOne; 
+        int mix7 = intOne * dobOne; 
+        int mix8 = intOne / dobOne; 
+        System.out.format ("Integer made of a double and an integer:\n%s\n%s\n%s\n%s\n", 
+            mix5, mix6, mix7, mix8);
+        */
             
         double mixOne = intOne + dobOne; 
         double mixTwo = intOne - dobOne; 
