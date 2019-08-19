@@ -44,23 +44,54 @@ public class DatatypeVariableAssignment
         Scanner input = new Scanner (System.in);
         System.out.println ("typeTest:");
         
-        /*int intOne = input.nextInt();
+        System.out.println ("Insert integers:");        
+        int intOne = input.nextInt();
         int intTwo = input.nextInt();
+        System.out.println ("Insert double:");                
+        double dobOne = input.nextDouble();
+        double dobTwo = input.nextDouble();
+        
+        
         int sumOne = intOne + intTwo;
         int difOne = intOne - intTwo;
         int prodOne = intOne * intTwo;
         int quotOne = intOne / intTwo;
         
-        System.out.format ("%s\n%s\n%s\n%s\n%s\n%s\n", 
+        System.out.format ("Integer made of two integers:\n%s\n%s\n%s\n%s\n%s\n%s\n", 
             intOne, intTwo, sumOne, difOne, prodOne, quotOne);
-        */
-        double dobOne = input.nextDouble();
-        double dobTwo = input.nextDouble();
+        
+        
         double sumTwo = dobOne + dobTwo;
         double difTwo = dobOne - dobTwo;
         double prodTwo= dobOne * dobTwo;
         double quotTwo = dobOne / dobTwo;
-        System.out.format ("%s\n%s\n%s\n%s\n%s\n%s\n", 
+        System.out.format ("Double made of two doubles:\n%s\n%s\n%s\n%s\n%s\n%s\n", 
             dobOne, dobTwo, sumTwo, difTwo, prodTwo, quotTwo);
+            
+        
+       
+        /* possible lossy conversions
+        
+        int intThree = dobOne + dobTwo; 
+        int intFour = dobOne - dobTwo;
+        int intFive = dobOne * dobTwo;
+        int intSix = dobOne / dobTwo;
+        System.out.format ("%s\n%s\n%s\n%s\n", 
+            intThree, intFour, intFive, intSix);
+        */
+       
+        double dobThree = intOne + intTwo; 
+        double dobFour = intOne - intTwo;
+        double dobFive = intOne * intTwo;
+        double dobSix = intOne / intTwo;
+        System.out.format ("Double made of two integers:\n%s\n%s\n%s\n%s\n", 
+            dobThree, dobFour, dobFive, dobSix);        
+            
+        double mixOne = intOne + dobOne; 
+        double mixTwo = intOne - dobOne; 
+        double mixThree = intOne * dobOne; 
+        double mixFour = intOne / dobOne; 
+        System.out.format ("Double made of a double and an integer:\n%s\n%s\n%s\n%s\n", 
+            mixOne, mixTwo, mixThree, mixFour);
     }
 }   
