@@ -23,4 +23,16 @@ public class MathOps
         double answer = Math.PI * Math.pow((diameter2 / 2), 2) * height2; 
         return answer;
     }
+    
+    /*public static int interest (int principal, int rate) {
+       int answer = 
+       return answer
+    }
+    */
+   
+    public static double finalPosition (double initial, double velocity, double time, double acceleration) {
+        double answer = initial + velocity * time + 0.5 * acceleration * Math.pow(time, 2);
+        return answer; 
+    }
+    
 }
