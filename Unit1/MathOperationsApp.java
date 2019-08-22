@@ -50,7 +50,7 @@ public class MathOperationsApp
         System.out.println (answerFour); 
         
         double finalPosition;
-                System.out.println ("Find final position of an object/n input initial velocity, final velocity, time, acceleration : ");
+        System.out.println ("Find final position of an object/n input initial velocity, final velocity, time, acceleration : ");
         a = input.nextDouble();
         b = input.nextDouble();
         c = input.nextDouble();

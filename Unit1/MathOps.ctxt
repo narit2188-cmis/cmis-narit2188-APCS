@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=MathOps
+comment0.text=\n\ Basic\ math\ operations.\n\n\ @author\ Narit\ Trikasemsak\n\ @version\ 0.1\n
+comment1.params=a\ b\ c
+comment1.target=int\ sum(int,\ int,\ int)
+comment2.params=a\ b\ c
+comment2.target=double\ avg(double,\ double,\ double)
+comment3.params=diameter\ height
+comment3.target=double\ cylinder(int,\ int)
+comment4.params=principal\ rate\ number\ time
+comment4.target=int\ interest(int,\ int,\ int,\ int)
+comment5.params=initial\ velocity\ time\ acceleration
+comment5.target=double\ finalPosition(double,\ double,\ double,\ double)
+numComments=6
