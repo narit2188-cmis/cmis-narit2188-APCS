@@ -33,14 +33,14 @@ public class MathOperationsApp
         System.out.println (answerTwo);
         
         double cylinderArea;
-        System.out.println ("Find the area of a cylinder/n input diameter, then height: ");
+        System.out.println ("Find the area of a cylinder\n input diameter, then height: ");
         basicAdd = input.nextInt();
         basicAdd2 = input.nextInt();
         double answerThree = MathOps.cylinder(basicAdd, basicAdd2);
         System.out.println (answerThree);
         
         int compoundInterest;
-        System.out.println ("Find amount with compound interest/n input principal, rate, number, time : ");
+        System.out.println ("Find amount with compound interest\n input principal, rate, number, time : ");
         basicAdd = input.nextInt();
         basicAdd2 = input.nextInt();
         basicAdd3 = input.nextInt();
@@ -50,7 +50,7 @@ public class MathOperationsApp
         System.out.println (answerFour); 
         
         double finalPosition;
-        System.out.println ("Find final position of an object/n input initial velocity, final velocity, time, acceleration : ");
+        System.out.println ("Find final position of an object\n input initial velocity, final velocity, time, acceleration : ");
         a = input.nextDouble();
         b = input.nextDouble();
         c = input.nextDouble();
