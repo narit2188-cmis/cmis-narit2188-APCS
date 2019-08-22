@@ -1,7 +1,5 @@
-import java.lang.Math.*;
-
 /**
- * Write a description of class MathOps here.
+ * Basic math operations.
  *
  * @author Narit Trikasemsak
  * @version 0.1
@@ -25,7 +23,7 @@ public class MathOps
     }
     
     public static int interest (int principal, int rate, int number, int time) {
-       int part1 = (int) Math.pow((1 + rate/number), (number*time));
+       int part1 = (int) Math.round(Math.pow((1 + rate/number), (number*time)));
        int answer = principal * part1; 
        return answer;
     }
