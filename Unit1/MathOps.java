@@ -24,11 +24,12 @@ public class MathOps
         return answer;
     }
     
-    /*public static int interest (int principal, int rate) {
-       int answer = 
-       return answer
+    public static int interest (int principal, int rate, int number, int time) {
+       int part1 = (int) Math.pow((1 + rate/number), (number*time));
+       int answer = principal * part1; 
+       return answer;
     }
-    */
+    
    
     public static double finalPosition (double initial, double velocity, double time, double acceleration) {
         double answer = initial + velocity * time + 0.5 * acceleration * Math.pow(time, 2);
