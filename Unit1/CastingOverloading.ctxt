@@ -7,9 +7,11 @@ comment2.params=
 comment2.target=int\ zeroTo99()
 comment3.params=n
 comment3.target=int\ zeroToN(int)
-comment3.text=public\ static\ double\ zeroTo99()\ {\n\ \ \ \ \ \ \ \ double\ org\ \=\ Math.random();\n\ \ \ \ \ \ \ \ double\ result\ \=\ org\ *\ 100;\n\ \ \ \ \ \ \ \ return\ result;\n\ \ \ \ }\n
+comment3.text=public\ static\ double\ zeroTo99()\ {\n\ \ \ \ \ \ \ \ return\ ((Math.random()\ *\ 100));\n}
 comment4.params=n
 comment4.target=double\ zeroToN(double)
 comment5.params=min\ max
 comment5.target=int\ minToMax(int,\ int)
-numComments=6
+comment6.params=min\ max
+comment6.target=double\ minToMax(double,\ double)
+numComments=7
