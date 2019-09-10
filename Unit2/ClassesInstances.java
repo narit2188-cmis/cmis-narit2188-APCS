@@ -58,4 +58,22 @@ public class ClassesInstances
       return b;
     }
 
+   public static int indexOf2ndLast(String haystack, String needle){
+      int a = haystack.lastIndexOf(needle);
+      int b = haystack.lastIndexOf(needle, a-1);
+      return b;
+    }
+   
+   public static boolean reduplication(String word){
+      int a = word.length();
+      int aa = a/2;
+      String one = word.substring(0,aa);
+      String two = word.substring(aa);
+      boolean result = one.equalsIgnoreCase(two);
+      return result; 
+    }
+    
+   public static boolean binContains(Integer i, String p){
+      String a = Integer.toBinaryString(i);
+    }
 }
