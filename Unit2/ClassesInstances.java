@@ -44,5 +44,18 @@ public class ClassesInstances
        return (result1 + result2 + result3); 
     }
     
+   public static String swapEnds(String a) {
+       int aa = a.length();
+       String result1 = a.substring(0,1);
+       String result2 = a.substring(aa-1); 
+       String resultMid = a.substring (1, aa-1);
+       return (result2 + resultMid + result1);
+    }
     
+   public static int indexOf2nd(String haystack, String needle) {
+      int a = haystack.indexOf(needle);
+      int b = haystack.indexOf(needle, a+1);
+      return b;
+    }
+
 }
