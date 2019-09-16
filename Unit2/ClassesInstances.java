@@ -75,5 +75,22 @@ public class ClassesInstances
     
    public static boolean binContains(Integer i, String p){
       String a = Integer.toBinaryString(i);
+      boolean result = a.contains(p);
+      return result;
     }
+    
+   public static boolean isPalindrome(Integer i) {
+       int a = Integer.reverse(i);
+       System.out.println(a);
+       String bb = Integer.toBinaryString(i);
+       System.out.println(bb);
+       String aa = Integer.toBinaryString(a);
+       System.out.println(aa);
+       Integer aaa = bb.length();
+       String aaaa = aa.substring(0,aaa); 
+       System.out.println(aaaa);
+       boolean result = bb.contains(aaaa);
+       return result; 
+    }
+  
 }
