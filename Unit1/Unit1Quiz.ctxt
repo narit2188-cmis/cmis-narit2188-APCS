@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Unit1Quiz
+comment0.text=\n\ APCS\ Unit\ 1\ Quiz\ W/\ Mr.\ Kief\n\n\ @author\ Narit\ Trikasemsak\n\ @version\ Sep.\ 18\ 2019\n
+comment1.params=a\ b
+comment1.target=int\ sumOfSquares(int,\ int)
+comment1.text=\ FOR\ TESTING\ ANSWERS\n\ \ \ \ public\ static\ void\ main\ (String[]\ argv)\ {\n\ \ \ \ \ \ \ \ System.out.println(sumOfSquares(2,\ 3));\n\ \ \ \ \ \ \ \ System.out.println(sumOfSquares(1,\ 2));\n\ \ \ \ \ \ \ \ System.out.println(squareOfSum(3.2,\ 4.5));\n\ \ \ \ \ \ \ \ System.out.println(squareOfSum(1.2,\ 2.3));\n\ \ \ \ \ \ \ \ System.out.println(avg(1,\ 3,\ 4));\n\ \ \ \ \ \ \ \ System.out.println(avg(3,\ 7,\ 1));\n\ \ \ \ \ \ \ \ System.out.println(avgOfCubes(3.4,\ 4.5,\ 5.6));\n\ \ \ \ \ \ \ \ System.out.println(avgOfCubes(-0.1,\ 2.1,\ 3.4));\n\ \ \ \ \ \ \ \ System.out.println(cubeOfAvg(1,\ 2,\ 3));\n\ \ \ \ \ \ \ \ System.out.println(cubeOfAvg(3,\ 7,\ 23));\n\ \ \ \ \ \ \ \ System.out.println(cubeOfAvg(2,\ 3,\ 3));\n\ \ \ \ \ \ \ \ System.out.println(sum(3.14,\ 3.14,\ 3.14));\n\ \ \ \ \ \ \ \ System.out.println(sum(4.0,\ 7.5,\ 0.66666666666666));\n\ \ \ \ }\n
+comment2.params=a\ b
+comment2.target=double\ squareOfSum(double,\ double)
+comment3.params=a\ b\ c
+comment3.target=double\ avg(int,\ int,\ int)
+comment4.params=a\ b\ c
+comment4.target=double\ avgOfCubes(double,\ double,\ double)
+comment5.params=a\ b\ c
+comment5.target=double\ cubeOfAvg(int,\ int,\ int)
+comment6.params=a\ b\ c
+comment6.target=int\ sum(double,\ double,\ double)
+numComments=7
