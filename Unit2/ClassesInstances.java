@@ -86,11 +86,42 @@ public class ClassesInstances
        System.out.println(bb);
        String aa = Integer.toBinaryString(a);
        System.out.println(aa);
-       Integer aaa = bb.length();
+       int aaa = bb.length();
        String aaaa = aa.substring(0,aaa); 
        System.out.println(aaaa);
        boolean result = bb.contains(aaaa);
        return result; 
     }
   
+   public static boolean isAnagram(Integer a, Integer b) {
+       String aa = Integer.toBinaryString(a);
+       String bb = Integer.toBinaryString(b);
+       int one = Integer.bitCount(a); 
+       int two = Integer.bitCount(a);
+       boolean result = 0 == (one-two); 
+       return result;
+    }
+    
+   public static boolean cubeContainsSelf(Integer i) {
+       int ii = i * i * i; 
+       String a = Integer.toBinaryString(ii);
+       String b = Integer.toString(i); 
+       boolean result = a.contains(b);
+       return result; 
+    }
+   
+   public static double maxValue(double a, double b, double c, double d) {
+       double ab = Math.max(a,b);
+       double cd = Math.max(c,d);
+       double result = Math.max(ab,cd);
+       return result;
+    }
+
+   public static Integer middleValue(Integer a, Integer b, Integer c){
+       int ab = Math.max(a,b);
+       int bc = Math.max(b,c);
+       int result = Math.min (ab,bc);
+       return result;
+    }
 }
+
