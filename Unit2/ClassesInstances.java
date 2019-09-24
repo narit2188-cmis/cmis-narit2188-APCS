@@ -118,9 +118,12 @@ public class ClassesInstances
     }
 
    public static Integer middleValue(Integer a, Integer b, Integer c){
-       int one = Math.max((a+b),(b+c));                          
-       int two = Math.max(one,(c+a));
-       int result = Math.min (one-a,two-c);
+       int one = Math.max(a,b);                          
+       int two = Math.max(b,c);
+       int three = Math.max (c,a);
+       int four = Math.min(one, two);
+       int five = Math.min (two, three); 
+       int result = Math.min (four,five);
        return result;
     }
 }
