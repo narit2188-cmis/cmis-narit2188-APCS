@@ -1,9 +1,15 @@
 public class SquareTester {
     
     public static void main (String[]argv) {
-        Square s = new Square();
+        Square s = new Square(10,"red",10.0);
         System.out.println (s);
-        Square a  = new Square();
-        System.out.println (a);
+        s.setLength(324);
+        s.setColor ("danny");
+        s.setWeight (101.1);
+        System.out.println(s);
+        System.out.println(s.getArea());
+        s.setArea (400.0);
+        System.out.println(s.getArea());
+
     }
 }
