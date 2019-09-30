@@ -2,17 +2,20 @@ public class Square {
     
     private double sideLength = 5;
     private String color = "red";
-    private double weight = 10.0;     
-    public Square (int side, String color, double weight){
+    private int weight = 10;     
+    public Square (double side, String color, int weight){
         this.sideLength = side;
         this.color = color;
-        this.weight = 10.0;       
+        this.weight = 10;       
+    }
+    public Square (double side){
+        this.sideLength = side; 
     }
     public Square (String color){
         this.color = color;
     }
-    public Square (double weight){
-        this.weight = 10.0;       
+    public Square (int weight){
+        this.weight = 10;       
     }
     public double getLength(){
         return sideLength;
@@ -26,10 +29,10 @@ public class Square {
     public void setColor (String newColor){
         color = newColor;
     }
-    public double getWeight (){
+    public int getWeight (){
         return weight;
     }
-    public void setWeight (double newWeight){
+    public void setWeight (int newWeight){
         weight = newWeight;                                                     
     }
     public double getArea (){
@@ -37,6 +40,15 @@ public class Square {
     }
     public void setArea (double area){
         sideLength = (Math.sqrt(area));
+    }
+    public Square sub(Square other){
+        double one = this.getArea(); 
+        double two = other.getArea();
+        double result = Math.max(one,two);
+        double result2 = Math.min(one,two);
+        double finalResult = result -result2; 
+        Square newArea = new Square(Math.sqrt(finalResult));
+        return newArea;
     }
     public String toString (){
         return "Square legnth of " + sideLength + " color " + color + " weight " + weight; 
