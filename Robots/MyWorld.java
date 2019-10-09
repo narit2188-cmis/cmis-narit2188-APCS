@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.lang.reflect.*;
 public class MyWorld extends World
 {
-    Class[] robotClasses = new Class[]{RobotTemplate.class};
+    Class[] robotClasses = new Class[]{NaritoBot.class};
     private double pctBlocks = 0.01;
     public MyWorld() throws NoSuchMethodException
     {    
@@ -15,7 +15,7 @@ public class MyWorld extends World
     public void init(){
         removeObjects(getObjects(null));
         showText("", getWidth()/2,getHeight()/2);
-        initLevel1();
+        initLevel2();
     }
 
     public void initBoard(){
