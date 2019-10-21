@@ -36,21 +36,28 @@ public class NaritoBot extends Robot
      * </ul>
      */
     public void behave(){
-        
-        if (isClearRight()){
-        right(); 
+        int oneX = getOldX();
+        int twoX = getX();
+        int oneY = getOldY();
+        int twoY = getOldY();
+        if (isClearRight()) {
+            right();
         }
-        else if(isClearDown()){
-        down();
+        else if (oneX == twoX && isClearUp()) {
+            up();
+        }    
+        else if (oneY == twoY && isClearDown()){
+            down();
         }
-        else if (isClearUp()){
-        up(); 
+        else if ((oneY == twoY) && (oneX == twoX)){
+            left();
         }
-        else if (isStuck()){
-        left();
+        else if (!isClearRight() && isClearDown()) {
+            down(); 
         }
-        else if (isClearLeft()){
-        up();
+        else if (!isClearRight() && isClearUp()){
+            up(); 
         }
-    }
-}
+
+        }
+    }   
