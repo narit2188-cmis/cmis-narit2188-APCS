@@ -9,7 +9,6 @@ public class NaritoBot extends Robot
     }
     
     public void init(){
-        
     }
     
     /**
@@ -36,22 +35,18 @@ public class NaritoBot extends Robot
      * </ul>
      */
     public void behave(){
-        int one = getData(1); 
-        if (isClearRight()) {
-            setData (one, one); 
-            one -= 1; 
-            setData (1,one);  
+        int increment = getData(0);
+        System.out.print(increment); 
+        if (isClearRight() && (increment == 0 )) {
             right();
         }
-        
-        else if (!isClearRight()){
-            one += 1; 
-            setData (1, one); 
+        else if (increment < 5){
+            setData(0, increment+1);
             double rando = Math.random();
-            if (rando < 0.33) {
+            if (rando < 0.333) {
                 down();
             }
-            else if (rando < 0.66){
+            else if (rando < 0.666){
                 up();
             }
             else {
@@ -59,7 +54,8 @@ public class NaritoBot extends Robot
             }
         }
         else {
-            left(); 
+            setData(0,0);
+        }
         }
     }
-    }  
+      
