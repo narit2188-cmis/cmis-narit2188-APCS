@@ -43,7 +43,7 @@ public class NaritoBot extends Robot
         else if (increment < 5){
             setData(0, increment+1);
             double rando = Math.random();
-            if (rando < 0.333) {
+            if (isClearDown() && increment < 2) {
                 down();
             }
             else if (rando < 0.666){
