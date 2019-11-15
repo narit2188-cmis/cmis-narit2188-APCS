@@ -82,7 +82,32 @@
      * Any combination of the three can make it valid, not necessarily in the order given.
      */
     public static boolean isPythTrip(int q, int x, int c){
+        int big = 0;
+        int smallOne = 0;
+        int smallTwo = 0; 
+        if ((q >= x) && (q >= c)){
+            big = q;
+            smallOne = x;
+            smallTwo = c; 
+        }
         
+        else if ((x >= q) && (x >= c)){
+            big = x;
+            smallOne = q;
+            smallTwo = c; 
+        }
+        
+        else if ((c >= x) && (c >= q)){
+            big = c;
+            smallOne = x;
+            smallTwo = q; 
+        }
+        double result = (Math.pow(smallOne, 2)) + (Math.pow(smallTwo, 2));
+        System.out.println(result);
+        System.out.println(big); 
+        if (result == Math.pow(big,2)){
+            return true;
+        }
         return false;
     }
     
@@ -90,14 +115,22 @@
      * return true if s1, s2, and s3 represent the length of the sides of a triangle.
      */
     public static boolean isTriangle(int s1, int s2, int s3){
-        return false;
+        if (s1 + s2 < s3) {return true;}
+        else if (s1 + s2 < s3) {return true;}
+        else if (s1 + s2 < s3) {return true;}
+        else{return false;}
     }
     
     /**
      * return true if word begins and ends with ps
      */
     public static boolean isPrefixAndSuffix(String ps, String word){
-        return false;
+        int prel = ps.length();
+        int wordl= word.length();
+        String prefix = word.substring(0, prel);
+        String suffix = word.substring (wordl - prel);
+        if (ps.equals(prefix) || ps.equals(suffix)){ return true;}
+        else{return false;}
     }
     
     /**
