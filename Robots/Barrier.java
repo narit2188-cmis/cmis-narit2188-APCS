@@ -5,7 +5,7 @@ public class Barrier extends Actor
 {
     private GreenfootImage img;
     public Barrier(){
-        img = new GreenfootImage(5,5);
+        img = new GreenfootImage(7,7);
         img.setColor(Color.BLACK);
         img.fill();
         setImage(img);

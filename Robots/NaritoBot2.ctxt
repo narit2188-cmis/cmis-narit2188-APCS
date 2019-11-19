@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=NaritoBot2
+comment1.params=
+comment1.target=NaritoBot2()
+comment2.params=
+comment2.target=void\ init()
+comment3.params=
+comment3.target=void\ behave()
+comment3.text=\n\ <p>\n\ What\ your\ robot\ can\ do\ <em>once</em>\ per\ round\:\n\ </p>\n\ <ul>\n\ <li>right()\ \=>\ move\ 1\ to\ the\ right</li>\n\ <li>left()\ \=>\ move\ 1\ to\ the\ left</li>\n\ <li>up()\ \=>\ move\ 1\ up</li>\n\ <li>down()\ \=>\ move\ 1\ down</li>\n\ </ul>\n\ <p>\n\ What\ your\ robot\ can\ do\ <em<any\ number\ of\ times</em>\ per\ round\:\n\ </p>\n\ <ul>\n\ <li>isClearRight()\ \=>\ returns\ true\ if\ no\ block\ to\ the\ right</li>\n\ <li>isClearLeft()\ \=>\ returns\ true\ if\ no\ block\ to\ the\ left</li>\n\ <li>isClearUp()\ \=>\ returns\ true\ if\ no\ block\ up</li>\n\ <li>isClearDown()\ \=>\ returns\ true\ if\ no\ block\ down</li>\n\ <li>isStuck()\ \=>\ returns\ true\ if\ Robot\ hasn't\ change\ position</li>\n\ <li>getData(int\ idx)\ \=>\ get\ a\ value\ from\ the\ array\ (there\ are\ 10\ slots)</li>\n\ <li>setData(int\ idx,\ int\ value)\ \=>\ replace\ a\ value\ in\ the\ array\ (there\ are\ 10\ slots)</li>\n\ </ul>\n
+numComments=4

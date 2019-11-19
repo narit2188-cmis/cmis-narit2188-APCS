@@ -1,14 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class NaritoBot extends Robot
+public class NaritoBot2 extends Robot
 {
-    public NaritoBot(){
+    public NaritoBot2(){
         super(Color.MAGENTA); //You can change the color
         //Color.RED, Color.BLUE, Color.GREEN, 
         //Color.YELLOW, Color.CYAN, Color.MAGENTA
     }
     
     public void init(){
+        
     }
     
     /**
@@ -37,29 +38,39 @@ public class NaritoBot extends Robot
     public void behave(){
         int increment = getData(0);
         System.out.print(increment); 
-        if (isClearRight() && (increment == 0 )) {
+        if (increment < 1) {
             right();
-        }
-        else if (increment < 10){
-            setData(0, increment+1);
-            double rando = Math.random();
-            if (isClearDown() && increment < 2) {
-                down();
-            }
-            else if (rando < 0.666){
-                up();
-            }
-            else {
-                left(); 
+            if (!isClearRight()){
+                setData(0, increment+1);
             }
         }
-        else if (increment > 10 && increment < 20) {
-            setData(0, increment+1);
+        else if (increment < 2) {
             left();
+            if (!isClearLeft()){
+                setData(0, increment+1);
+            }
+        }
+        else if (increment < 4) {
+            double random = Math.random();
+            if (random < 0.5){
+            down();
+            if (!isClearDown()){
+                setData(0, increment+1);
+            }}
+            else {
+            up();
+            if (!isClearUp()){
+                setData(0, increment+1);
+            }}
+        }
+        else if (increment < 5) {
+            right();
+            if (!isClearUp()){
+                setData(0, increment+1);
+            }
         }
         else {
-            setData(0,0);
-        }
+            setData (0,0);
         }
     }
-      
+}
