@@ -151,6 +151,19 @@
      * return -> "ter"
      */
     public static String shortSide(String word, String c){
+        int position = word.indexOf(c); 
+        String one = word.substring(0,position);
+        String two = word.substring(position+1);
+        int lengthOne = one.length();
+        int lengthTwo = two.length();
+        if (lengthOne < lengthTwo){
+            return one;}
+        else if (lengthTwo < lengthOne){
+            return two;
+        }
+        else if (lengthOne == lengthTwo){
+            return (one + two);
+        }
         return "";
     }
     
@@ -166,6 +179,26 @@
      * return -> true
      */
     public static boolean tooMany(String word, String c){
-        return false;
+        int index1 = word.indexOf(c);
+        if (index1 >= 0) {
+            String word2 = word.substring(index1+1);
+            int index2 = word2.indexOf(c);
+            if (index2 >= 0){
+                String word3 = word2.substring(index2+1);
+                int index3 = word3.indexOf(c);
+                if (index3 >= 0) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
     }
 }
