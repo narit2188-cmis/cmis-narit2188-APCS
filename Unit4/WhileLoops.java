@@ -1,6 +1,9 @@
 
 public class WhileLoops
-{
+{   
+   public static void main(){
+       System.out.println(multiplicationTable(3,5)); 
+    }
    public static String squareTable(){
        int integer = 1;
        while (integer <= 10) {
@@ -36,6 +39,8 @@ public class WhileLoops
        String result = "\t";
        int max = Math.max(input1,input2);
        int increment = 0; 
+       int increment2 = 0;
+       int increment3 = 0;
        while (increment <= max) {
            if (increment == 0) {
                while (across <= input1){
@@ -44,9 +49,16 @@ public class WhileLoops
                 }
             }
            result += "\n";
-           result += input2;
-           result += (input1 * input2) + "\t"; 
-           increment += 1; 
+           if (increment2 <= input2){
+               result+= down + "\t";
+               down +=1;
+            }
+           while (increment3 <= max){
+               result += (int)(input1 * input2); 
+               increment3 += 1; 
+            }
+           increment += 1;
+           
         }
        return result; 
     }

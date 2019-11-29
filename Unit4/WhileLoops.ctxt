@@ -1,11 +1,13 @@
 #BlueJ class context
 comment0.target=WhileLoops
 comment1.params=
-comment1.target=java.lang.String\ squareTable()
-comment2.params=input
-comment2.target=int\ triangle(int)
+comment1.target=void\ main()
+comment2.params=
+comment2.target=java.lang.String\ squareTable()
 comment3.params=input
-comment3.target=int\ pyramid(int)
-comment4.params=input1\ input2
-comment4.target=java.lang.String\ multiplicationTable(int,\ int)
-numComments=5
+comment3.target=int\ triangle(int)
+comment4.params=input
+comment4.target=int\ pyramid(int)
+comment5.params=input1\ input2
+comment5.target=java.lang.String\ multiplicationTable(int,\ int)
+numComments=6
