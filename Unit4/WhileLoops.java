@@ -2,7 +2,7 @@
 public class WhileLoops
 {   
    public static void main(){
-       System.out.println(multiplicationTable(3,5)); 
+       System.out.println(multiplicationTable(655,1111)); 
     }
    public static String squareTable(){
        int integer = 1;
@@ -40,7 +40,10 @@ public class WhileLoops
        int max = Math.max(input1,input2);
        int increment = 0; 
        int increment2 = 0;
-       int increment3 = 0;
+       int a = 1;
+       int b = 1; 
+       int c = 0; 
+       int d = 0; 
        while (increment <= max) {
            if (increment == 0) {
                while (across <= input1){
@@ -53,10 +56,14 @@ public class WhileLoops
                result+= down + "\t";
                down +=1;
             }
-           while (increment3 <= max){
-               result += (int)(input1 * input2); 
-               increment3 += 1; 
+           while (c < input1){
+               result += a * b + "\t"; 
+               a += 1;
+               c += 1; 
             }
+           a =1; 
+           b+=1; 
+           c = 0; 
            increment += 1;
            
         }
