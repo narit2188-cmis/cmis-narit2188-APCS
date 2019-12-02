@@ -2,7 +2,8 @@
 public class WhileLoops
 {   
    public static void main(){
-       System.out.println(multiplicationTable(655,1111)); 
+       System.out.println(checkerboard(5,5)); 
+       
     }
    public static String squareTable(){
        int integer = 1;
@@ -33,7 +34,7 @@ public class WhileLoops
        return result; 
     }
     
-   public static String multiplicationTable(int input1, int input2){
+    public static String multiplicationTable(int input1, int input2){
        int across = 1;
        int down = 1; 
        String result = "\t";
@@ -43,7 +44,6 @@ public class WhileLoops
        int a = 1;
        int b = 1; 
        int c = 0; 
-       int d = 0; 
        while (increment <= max) {
            if (increment == 0) {
                while (across <= input1){
@@ -65,7 +65,53 @@ public class WhileLoops
            b+=1; 
            c = 0; 
            increment += 1;
-           
+        }
+       return result; 
+    }
+    public static String checkerboard (int h, int w) {
+       int across = 1;
+       String result = "";
+       int increment = 0; 
+       int max = Math.max(h,w);
+       int a = 0;
+       int b = 0; 
+       boolean last = false;
+       while (increment <= max){
+           if (increment == 0) {
+               result += "+";
+               while (across <= w){
+                   result += "-";
+                   across +=1; 
+                }
+               result += "+"; 
+            } 
+           result += "\n";
+           if (a < h){
+               result+= "|";
+               a +=1;
+           }
+           while (b < w) {
+               if ((b % 2) == 0){
+                   result += "#";
+                }
+               if ((b % 2) != 0){
+                   result += " "; 
+                }
+                b += 1; 
+            }
+           result += "|";
+           b = 0;
+           if (last) {
+               result += "+";
+               while (across <= w){
+                   result += "-";
+                   across +=1; 
+                }
+               result += "+"; 
+            } 
+            
+           increment += 1; 
+
         }
        return result; 
     }

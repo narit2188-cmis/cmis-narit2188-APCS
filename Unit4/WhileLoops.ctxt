@@ -10,4 +10,6 @@ comment4.params=input
 comment4.target=int\ pyramid(int)
 comment5.params=input1\ input2
 comment5.target=java.lang.String\ multiplicationTable(int,\ int)
-numComments=6
+comment6.params=h\ w
+comment6.target=java.lang.String\ checkerboard(int,\ int)
+numComments=7
