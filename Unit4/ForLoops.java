@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class ForLoops here.
  *
@@ -60,7 +60,8 @@ public class ForLoops
         String result = "";
         for (int y = 0; y<height;y++){
             for (int x =0; x<width; x++){
-                int rando = (int)(Math.random() * length);
+                Random index = new Random();
+                int rando = index.nextInt(length); 
                 char add = symbols.charAt(rando); 
                 result += add;
             }
@@ -68,5 +69,22 @@ public class ForLoops
         }
         System.out.print(result);
         return result; 
+    }
+    public static String readMap (int x, int y, String map){
+        int indexWidth = map.indexOf("\n");
+        int indexHeight = map.indexOf("\n");
+        int count = 0; 
+        int a = 0;
+        String result = "";
+        while (indexHeight != -1){
+            indexHeight = map.indexOf("\n", indexHeight+1);
+            count ++; 
+        }
+        if ((x > indexWidth) || (y > count)){return "error";}
+        else {
+            a = indexWidth * (y - 1) + (2 * (y-1));
+            result = map.substring(a, a+1); 
+        }
+        return result;
     }
 }

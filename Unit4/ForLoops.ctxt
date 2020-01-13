@@ -5,4 +5,6 @@ comment1.params=rows\ columns\ operation
 comment1.target=java.lang.String\ table(int,\ int,\ int)
 comment2.params=height\ width\ symbols
 comment2.target=java.lang.String\ map(int,\ int,\ java.lang.String)
-numComments=3
+comment3.params=x\ y\ map
+comment3.target=java.lang.String\ readMap(int,\ int,\ java.lang.String)
+numComments=4
