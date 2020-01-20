@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Arrays
+comment0.text=\n\ Write\ a\ description\ of\ class\ Arrays\ here.\n\n\ @Narit\n\ @1.0\n
+comment1.params=array
+comment1.target=int\ max(int[])
+comment2.params=array
+comment2.target=int\ minIdx(int[])
+comment3.params=array
+comment3.target=int\ sum(int[])
+comment4.params=array
+comment4.target=double\ avg(int[])
+comment5.params=array\ threshold
+comment5.target=boolean\ allGreater(int[],\ int)
+numComments=6
