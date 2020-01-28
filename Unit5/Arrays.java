@@ -19,7 +19,8 @@ public class Arrays
                 max = result; 
             }
         }
-        return max;}
+        return max;
+    }
     public static int minIdx(int[] array){
         int result;
         int length;
@@ -31,20 +32,23 @@ public class Arrays
                 min = x; 
             }
         }
-        return min;}
+        return min;
+    }
     public static int sum(int[] array){
         int sum =0;
         int length = array.length;
         for (int x=0;x<length;x++){
             sum += array[x];}
-        return sum;}
+        return sum;
+    }
     public static double avg(int[] array){
         double avg = 0;
         int length = array.length;
         for (int x=0;x<length;x++){
             avg += array[x];}
         avg = avg/length;
-        return avg;}
+        return avg;
+    }
     public static boolean allGreater(int[] array, int threshold){
         int num =0;
         boolean ans = true; 
@@ -55,20 +59,89 @@ public class Arrays
                 ans = false; 
             }
         }
-        return ans;}
-    /*public static boolean oneGreater(int[] array, int threshold){
-        return true exactly 1 value is greater than threshold}
+        return ans;
+    }
+    public static boolean oneGreater(int[] array, int threshold){
+        int num =0;
+        boolean ans = false; 
+        int length = array.length;
+        int number = 0; 
+        for (int x=0;x<length;x++){
+            num = array[x];
+            if (num>threshold){
+                ans = true; 
+                number++; 
+            }
+            if (number>1){
+                ans = false; 
+            }
+        }
+        return ans;
+    }
     public static int sumOfLessThan(int[] array, int threshold){
-        return sum of all values less than threshold}
+        int num =0;
+        int ans = 0;  
+        int length = array.length;
+        for (int x=0;x<length;x++){
+            num = array[x];
+            if (num<threshold){
+                ans+= num; 
+            }
+        }
+        return ans;
+    }
     public static int greatestPairIdx(int[] array){
-        return index of greatest sum of consecutive pairs}
+        int index = 0;
+        int sumBig = 0; 
+        int length = array.length;
+        int start = array[0] + array[1]; 
+        for (int x =0; x<length-1; x++){
+            int sum = array[x] + array[x+1]; 
+            if (sum > sumBig){
+                index = x; 
+            }
+        }
+        return index; 
+    }
     public static int[] reverse(int[] array){
-        return array reveresed}
+        int length = array.length;
+        int[] newArray = new int[length]; 
+        int y = length - 1; 
+        for (int x=0;x<length;x++){
+            int place = array[x];
+            newArray[y] = place;
+            y--; 
+        }
+        return newArray;
+    }
     public static int[] shiftLeft(int[] array, int distance){
-        return array with values shifted to the left by distance}
+        int length = array.length;
+        int[] newArray = new int[length]; 
+        int y = length; 
+        for (int x=0;x<length;x++){
+            if (x-distance <0 ){
+                newArray[(length-distance)+x] = array[x]; 
+            }
+            else {
+                newArray[x-distance] = array[x]; 
+            }
+        }
+        return newArray;
+    }
     public static int[] shiftRight(int[] array, int distance){
-        return array with values shifted to the right by distance}
-    public static int[] interleave(int[] array1, int[] array2){
+        int length = array.length;
+        int[] newArray = new int[length]; 
+        int y = length; 
+        for (int x=0;x<length;x++){
+            if (x+distance > length ){
+                newArray[(length-distance)+x] = array[x]; 
+            }
+            else {
+                newArray[x-distance] = array[x]; 
+            }
+        }
+        return newArray;
+    /*public static int[] interleave(int[] array1, int[] array2){
         return 2 arrays interleaved}
     public static int[] maxValues(int[] array1, int[] array2){
         return new array with max value from each index}
@@ -76,4 +149,4 @@ public class Arrays
         return true if all items in array are unique}
     public static int[] uniqueValues(int[] array){
         return new array containing unique values from array} */
-}
+    }}
