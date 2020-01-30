@@ -151,27 +151,78 @@ public class Arrays
         for (int x=0; x<big;x++){
             if ((x)>=(length1-1)){
                 result[y] = array1[x];
-                System.out.print(result[y]);
-                System.out.print(y);
                 y++; 
-                for (int z = x;z<big;z++){
-                    System.out.print(x);
-
-                    result[y]=array2[z];
+                for (;x<big;x++){
+                    result[y]=array2[x];
+                    y++; 
+                }
+                return result; 
+            }
+            else if ((x)>=(length2-1)){
+                result[y] = array2[x];
+                y++; 
+                for (;x<big;x++){
+                    result[y]=array1[x];
+                    y++; 
                 }
                 return result; 
             }
             else{
             result[y]= array1[x];
             result[y+1]= array2[x]; 
-            y+=2;}
+            y+=2;
+            }
         }
         return result; 
     }
-    /*public static int[] maxValues(int[] array1, int[] array2){
-        return new array with max value from each index}
+    public static int[] maxValues(int[] array1, int[] array2){
+        int length1 = array1.length;
+        int length2 = array2.length; 
+        int big = Math.max(length1,length2);
+        int small = Math.min(length1, length2);
+        int[] result = new int[big]; 
+        for(int x = 0; x<big; x++){
+            if (((big-small)!= 0) && x>=small){
+                if (big == (length2)){
+                        for (;x<big;x++){
+                            result[x] = array2[x]; 
+                            return result; 
+                        }
+                }
+                else if (big == (length2)){
+                        for (;x<big;x++){
+                            result[x] = array1[x]; 
+                            return result; 
+                        }
+                }
+                    
+            }
+            int compare = Math.max(array1[x],array2[x]);
+            result[x] = compare;
+        }
+        return result; 
+    }
     public static boolean allUnique(int[] array){
-        return true if all items in array are unique}
-    public static int[] uniqueValues(int[] array){
+        boolean result = true; 
+        int length = array.length; 
+        int[] newarray = new int[length];
+        for (int y = 0; y<length; y++){
+            int current = array[y];
+            newarray[y] = current; 
+            System.out.print(current); 
+        }
+        for (int x =0; x<length; x++){
+            int current = array[x]; 
+            for (int check = 0; check < length; check++){
+                int all = newarray[check]; 
+                if (current == all){
+                    return false; 
+                }
+            }
+            result = true; 
+        }
+        return result; 
+    }
+    /*public static int[] uniqueValues(int[] array){
         return new array containing unique values from array} */
     }
