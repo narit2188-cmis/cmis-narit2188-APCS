@@ -206,16 +206,25 @@ public class Arrays
         boolean result = true; 
         int length = array.length; 
         int[] newarray = new int[length];
+        int uniq = 0; 
         for (int y = 0; y<length; y++){
             int current = array[y];
             newarray[y] = current; 
             System.out.print(current); 
         }
         for (int x =0; x<length; x++){
-            int current = array[x]; 
+            int aa = array[x]; 
+            System.out.println(aa); 
             for (int check = 0; check < length; check++){
                 int all = newarray[check]; 
-                if (current == all){
+                System.out.print(all);
+                if (aa == all){
+                    uniq++; 
+                }
+                else {
+                    uniq = 0; 
+                }
+                if (uniq > 1){
                     return false; 
                 }
             }
@@ -223,6 +232,16 @@ public class Arrays
         }
         return result; 
     }
-    /*public static int[] uniqueValues(int[] array){
-        return new array containing unique values from array} */
-    }
+    public static int[] uniqueValues(int[] array){
+        int length = array.length;
+        int newArrayLength = 0; 
+        String result = "";
+        String arrayS = ""; 
+        for (int y = 0; y<length; y++){
+            int current = array[y];
+            arrayS += current; 
+        }
+        System.out.print(arrayS); 
+        return array; 
+        }
+    } 
