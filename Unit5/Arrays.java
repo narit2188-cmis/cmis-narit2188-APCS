@@ -235,13 +235,42 @@ public class Arrays
     public static int[] uniqueValues(int[] array){
         int length = array.length;
         int newArrayLength = 0; 
-        String result = "";
-        String arrayS = ""; 
+        int[] checkArray = new int[length];
+        int increment = 0; 
+        int arrayY = 0; 
+        boolean hasZero = false; 
+        int zeroMore = 0; 
         for (int y = 0; y<length; y++){
             int current = array[y];
-            arrayS += current; 
+            for (int x =0; x<length; x++){
+                int check = checkArray[x];
+                int current1 = array[x];
+                if (current == 0) {
+                    hasZero = true; 
+                    zeroMore += 1; 
+                }
+               else if (current == check){
+                    increment +=1; 
+                }
+            }
+            if (hasZero){
+                if(zeroMore == length){
+                checkArray[arrayY] = current;
+                arrayY +=1; 
+                newArrayLength += 1; }
+                hasZero = false; 
+            }
+            else if (increment < 1) {
+                checkArray[arrayY] = current; 
+                arrayY +=1; 
+                newArrayLength += 1; 
+            }
+            increment = 0; 
         }
-        System.out.print(arrayS); 
-        return array; 
+        int[] result = new int[newArrayLength]; 
+        for (int z = 0; z <newArrayLength; z++){
+            result[z] = checkArray[z]; 
         }
+        return result; 
     } 
+}
