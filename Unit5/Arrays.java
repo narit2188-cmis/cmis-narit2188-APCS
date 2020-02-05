@@ -1,4 +1,4 @@
-    
+import java.util.Random; 
 /**
  * Write a description of class Arrays here.
  *
@@ -273,4 +273,32 @@ public class Arrays
         }
         return result; 
     } 
+    public static int[] randomArray(int length, int min, int max){
+        int[] array = new int [length]; 
+        for (int x =0; x < length; x++){
+            int random = min + (int)(Math.random() * ((max - min) +1)); 
+            System.out.println (random + " x is " + x); 
+            array[x] = random; 
+        }
+        return array; 
+    }
+    public static int[] bubbleSort(int[] array){
+        int length = array.length; 
+        int start = 0;
+        int y= 0; 
+        for (int x = 0; x < length; x++){
+            int current = array[start]; 
+            for (; y <length-1; y++){
+                int next  = array[y+1]; 
+                System.out.println ("current is " + current + " next is " + next); 
+                if (current>next){
+                    array[y] = next;
+                    array[y+1] = current; 
+                    System.out.println ("swapped"); 
+                }
+            }
+            y = 0; 
+        }
+        return array; 
+    }
 }
