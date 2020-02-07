@@ -284,21 +284,48 @@ public class Arrays
     }
     public static int[] bubbleSort(int[] array){
         int length = array.length; 
-        int start = 0;
-        int y= 0; 
+        int increment = 0;
         for (int x = 0; x < length; x++){
-            int current = array[start]; 
-            for (; y <length-1; y++){
-                int next  = array[y+1]; 
-                System.out.println ("current is " + current + " next is " + next); 
-                if (current>next){
-                    array[y] = next;
-                    array[y+1] = current; 
-                    System.out.println ("swapped"); 
-                }
+            for (int y = 0; y < length - 1 ; y ++){
+                if (array[y] > array[y+1]){
+                    int placeholder = array[y+1];
+                    array[y+1] = array [y];
+                    array[y] = placeholder; 
+                    increment++; 
+                } 
             }
-            y = 0; 
+            if (increment == 0){
+                x = length; 
+            }
+            increment = 0; 
         }
         return array; 
+    }
+    public static int linearSearch(int[] haystack, int needle){
+        int length = haystack.length; 
+        int result = -1; 
+        for (int x = 0; x < length - 1; x++){
+            if (haystack[x] == needle){
+                result = x; 
+            }
+        }
+        return result; 
+    }
+    public static int binarySearch(int[] haystack, int needle){
+        int length = haystack.length; 
+        int result = -1; 
+        int index = 0; 
+        for (int x = 0; x < length; x++){
+            int half = length / 2; 
+            if (needle == haystack[half]){
+                result = half; 
+            }
+            else if (needle < haystack[half]){
+                
+            }
+            else if (needle > haystack[half]){
+                
+            }
+        }
     }
 }
