@@ -314,18 +314,27 @@ public class Arrays
     public static int binarySearch(int[] haystack, int needle){
         int length = haystack.length; 
         int result = -1; 
-        int index = 0; 
+        int index = length/2; 
         for (int x = 0; x < length; x++){
-            int half = length / 2; 
-            if (needle == haystack[half]){
-                result = half; 
+            int half = index / 2; 
+            if (haystack[0] == needle){
+                result = 0; 
+                return result; 
             }
-            else if (needle < haystack[half]){
-                
+            else if (index >= length){
+                return result; 
             }
-            else if (needle > haystack[half]){
-                
+            else if (needle == haystack[index]){
+                result = index; 
             }
+            else if (needle < haystack[index]){
+                index -= half; 
+            }
+            else if (needle > haystack[index]){
+                index += half; 
+            }
+
         }
+        return result; 
     }
 }
