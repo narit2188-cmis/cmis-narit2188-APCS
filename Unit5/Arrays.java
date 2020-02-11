@@ -337,4 +337,29 @@ public class Arrays
         }
         return result; 
     }
+    public static int binarySearch2(int[] haystack, int needle){
+        int length = haystack.length;
+        int index = (length-1)/ 2;
+        int result = -1; 
+        int repeat = 0; 
+        while ((result == -1) && ((index < length) || (repeat == 0))){
+            int oldIdx = index; 
+            if (haystack[index] == needle){
+                result = index;
+            }
+            else if (needle > haystack[index]){
+                index = (index + (length-1))/2; 
+            }
+            else if (needle < haystack[index]){
+                index = index/2; 
+            }
+            if (index == 0){
+                repeat += 1; 
+            }
+            else if (oldIdx == index){
+                index ++; 
+            }
+        }
+        return result; 
+    }           
 }
