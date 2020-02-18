@@ -19,18 +19,19 @@ public class InsertionSort
 
     public static void sort(int[] array){
         int length = array.length; 
-        int sorted = 0; 
-        for (int x = 1; x < length -1; x++){
-            int current = array[x]; 
-            for (int minus = sorted; minus >= 0; minus--){
-                int compare = array[sorted]; 
-                if (current < compare){
-                    for (int move = 0; move <= sorted; move ++){
-                        int temp = array[sorted];
-                        array[sorted] 
-                    }
+        int sorted = 1; 
+        int current = 0; 
+        for (int x = 0; x < length -1; x++){
+            for (int y = sorted; y > 0; y--){
+                current = array[y-1]; 
+                int next = array[y];
+                if (next < current){
+                    int temp = array[y]; 
+                    array[y] = current;
+                    array[y-1] = temp; 
                 }
             }
+            sorted += 1; 
         }
     }
 }
