@@ -1,6 +1,11 @@
 #BlueJ class context
 comment0.target=ArrayLists
-comment0.text=\n\ Write\ a\ description\ of\ class\ ArrayLists\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=argv
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=al
+comment2.target=java.util.List\ getOdds(java.util.List)
+comment3.params=al
+comment3.target=void\ insertAvgs(java.util.List)
+comment4.params=words
+comment4.target=java.util.List\ chopper(java.util.List)
+numComments=5
