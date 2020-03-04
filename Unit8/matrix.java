@@ -3,7 +3,7 @@ public class matrix
     public static void main (String argv[]){
         int [][] matrix = new int[3][3];
         int[][] matrix1 = {{1,2,3},{4,5,6},{7,8,9}, {10,11,12}}; 
-        print3(matrix1); 
+        print1(matrix1); 
     }
     public static void print (int[][] matrix1){
         for (int x = 0; x<matrix1.length; x++){
@@ -25,7 +25,7 @@ public class matrix
     }
     public static void print3 (int[][] matrix1){
         for (int x = 0; x<matrix1.length; x++){
-            for (int y = 0; y<(matrix.length); y++){
+            for (int y = 0; y<matrix1.length; y++){
                 System.out.print (matrix1[y][x] + " "); 
             }
             System.out.println(); 
