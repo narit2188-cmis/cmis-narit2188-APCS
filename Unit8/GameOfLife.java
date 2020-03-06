@@ -18,10 +18,9 @@
                          {0,0,0,0,0,0,0,0,0,0},
                          {0,0,0,0,0,0,0,0,0,0},
                          {0,0,0,0,0,0,0,0,0,0}};
-        print1(board); 
-        nextGeneration(board);
-        System.out.println(); 
-        print1(board); 
+        print1(board);
+        System.out.println();
+        nextGeneration1(board);
     }    
     public static int[][] nextGeneration(int[][] board){
         int current = 0; 
@@ -32,19 +31,21 @@
             for (int column = 0; column < board[row].length; column++){
                 for (row1 = -1; row1 <= 1; row1++){
                     int checkRow = row + row1; 
-                    if (checkRow >= 0 && (checkRow <board.length)){
+                    if ((checkRow >= 0) && (checkRow <board.length)){
                         for (column1 = -1; column1 <=1; column1++){
                             int checkColumn = column + column1;
-                            if (checkColumn >= 0 && (checkColumn <board[row].length) && ((checkColumn != column) && (checkRow != row))){
-                                if(board[checkRow][checkColumn] == 1){
-                                    surrounding ++; 
-                                }
+                            if ((checkColumn >= 0) && (checkColumn <board[row].length)){
+                                if (!((checkRow == row) && (checkColumn == column)))
+                                    if(board[checkRow][checkColumn] == 1){
+                                        surrounding ++; 
+                                    }
                             }
                         }
+                        column1 = -1;
                     }
-                     column1 = -1;
                 }
                 row1 = -1; 
+                System.out.println ("current " + row + column + "surrouding " + surrounding); 
                 if (surrounding<2){
                     board[row][column] = 0; 
                 }
@@ -58,6 +59,45 @@
             }
         }
         return board; 
+    } 
+    public static int[][] nextGeneration1(int[][] board){
+        int[][] result = new int[10][10]; 
+        int current = 0; 
+        int surrounding = 0; 
+        int row1 = -1;
+        int column1 = -1; 
+        for (int row = 0; row < board.length; row ++){
+            for (int column = 0; column < board[row].length; column++){
+                for (row1 = -1; row1 <= 1; row1++){
+                    int checkRow = row + row1; 
+                    if ((checkRow >= 0) && (checkRow <board.length)){
+                        for (column1 = -1; column1 <=1; column1++){
+                            int checkColumn = column + column1;
+                            if ((checkColumn >= 0) && (checkColumn <board[row].length)){
+                                if (!((checkRow == row) && (checkColumn == column)))
+                                    if(board[checkRow][checkColumn] == 1){
+                                        surrounding ++; 
+                                    }
+                            }
+                        }
+                        column1 = -1;
+                    }
+                }
+                row1 = -1; 
+                if (surrounding<2){
+                    result[row][column] = 0; 
+                }
+                else if (surrounding < 4){
+                    result[row][column] = 1; 
+                }
+                else if (surrounding > 3){
+                    result[row][column] = 0; 
+                }
+                surrounding = 0; 
+            }
+        }
+        print1(result); 
+        return result; 
     }
     public static void print1 (int[][] matrix1){
         for (int[] x : matrix1){
