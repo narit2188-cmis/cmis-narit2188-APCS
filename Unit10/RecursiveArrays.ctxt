@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=RecursiveArrays
+comment0.text=\n\ Write\ a\ description\ of\ class\ RecursiveArrays\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=argv
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array\ idx1\ idx2
+comment2.target=void\ printArray(int[],\ int,\ int)
+comment3.params=array\ idx
+comment3.target=int\ sum(int[],\ int)
+comment4.params=array\ idx\ greatest
+comment4.target=int\ greatestValue(int[],\ int,\ int)
+numComments=5

@@ -11,7 +11,7 @@ public class Recursive
         System.out.println(multiply(5,5));
         System.out.println(power(5,5)); 
         System.out.println(factorial(5)); 
-        System.out.println(divide(100,5)); 
+        System.out.println(divide(7,5)); 
     }
     public static int multiply (int n, int x){
         if (x == 0){
@@ -37,12 +37,12 @@ public class Recursive
            return (factorial(n-1)*n);
         }
     }
-    public static int divide (int n, int x){
-        if (n == 0){
+        public static int divide (int n, int x){
+        if (n < x){
             return 0;  
         }
         else {
-           return (divide(n-x,x) - x);
+           return (divide(n-x,x) + 1);
         }
     }
 }
